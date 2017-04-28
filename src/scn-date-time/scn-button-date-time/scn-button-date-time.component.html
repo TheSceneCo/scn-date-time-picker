@@ -1,0 +1,21 @@
+<div>
+  <button [(dateTimePicker)]="momentValue"
+          [ngStyle]="{'display': momentValue ? 'none' : ''}"
+          (dateTimePickerChange)="_dateTimePickerChange($event)"
+          [returnObject]="returnObject"
+          [theme]="theme">
+    {{text}}
+  </button>
+
+  <button *ngIf="momentValue"
+          [(dateTimePicker)]="momentValue"
+          (dateTimePickerChange)="_dateTimePickerChange($event)"
+          [returnObject]="returnObject"
+          [theme]="theme">
+    {{text}}
+    <br/>
+    {{momentValue | date: format}}
+    <br/>
+    <span (click)="clear()" class="clear-datetime-button">Clear</span>
+  </button>
+</div>

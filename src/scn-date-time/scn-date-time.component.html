@@ -1,0 +1,14 @@
+<scn-button-date-time [text]="startLabel"
+                      [format]="format"
+                      (dateTimePickerChange)="fromDateChange($event)"
+                      [theme]="theme"
+                      [returnObject]="returnObject"
+                      [(ngModel)]="dateTime.from">
+</scn-button-date-time>
+<scn-button-date-time [text]="endLabel"
+                      [format]="format"
+                      (dateTimePickerChange)="toDateChange($event)"
+                      [theme]="theme"
+                      [returnObject]="returnObject"
+                      [(ngModel)]="dateTime.to">
+</scn-button-date-time>
